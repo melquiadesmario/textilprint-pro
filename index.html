@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-be">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TextilPrint Pro - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Painel de Monitoramento de Produção</h1>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Total de Pedidos</h3>
+            <p class="card-text" id="totalPedidos">0</p>
+        </div>
+        <div class="card">
+            <h3>Pedidos Pendentes</h3>
+            <p class="card-text" id="pedidosPendentes">0</p>
+        </div>
+        <div class="card">
+            <h3>Pedidos Processando</h3>
+            <p class="card-text" id="pedidosProcessando">0</p>
+        </div>
+        <div class="card">
+            <h3>Pedidos Concluídos</h3>
+            <p class="card-text" id="pedidosConcluidos">0</p>
+        </div>
+    </div>
+
+    <div class="group-input">
+        <div class='container-search'>
+            <label for="search">Buscar Cliente:</label>
+            <div class="input-container-search">
+                <span class="icon">🔍</span>
+                <input id="buscarInput" class="inputStyle" type="text" placeholder="Buscar Cliente...">
+            </div>
+        </div>
+        <div class="container-adicionar">
+            <div class="input-container">
+                <label for="adicionarCliente">Adicionar Cliente:</label>
+                <input id="addInput" class="inputStyle input-small" type="text" placeholder="Nome Cliente">
+            </div>
+            <div class="input-container">
+                <label for="materiais">Materiais:</label>
+                <select class="inputStyle" id="itens" name="itens">
+                    <option value="sm">Selecione o tipo</option>
+                    <option value="m1">Materiais 1</option>
+                    <option value="m2">Materiais 2</option>
+                    <option value="m3">Materiais 3</option>
+                </select>
+            </div>
+            <div class="input-container-qtd">
+                <label for="adicionarQtd">Quantidade:</label>
+                <input id="addQtd" class="inputStyleQtd input-small" type="number" placeholder="Quantidade">
+            </div>
+            <div class="input-container">
+                <label class="hidden" for="acao">Ação</label>
+                <button class="adicionarStyle btn-adicionar" type="button" onclick="adicionarPedido()">Adicionar</button>
+            </div>
+        </div>
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>OS</th>
+                    <th>Cliente</th>
+                    <th>Preço</th>
+                    <th>Status</th>
+                    <th>Ação</th>
+                    <th>Excluir</th>
+                </tr>
+            </thead>
+            <tbody id='tabela-pedidos'></tbody>
+        </table>
+    </div>
+    <footer>&copy; 2026 TextilPrint Pro - Melquíades Mário</footer>
+    <script src="script.js"></script>
+</body>
+</html>

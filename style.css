@@ -1,0 +1,253 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background: #f4f4f9;
+    max-width: 1080px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 30%;
+    text-align: center;
+    color: white;
+}
+
+.card-text {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.card:nth-child(1) {
+    background-color: #3498db;
+}
+
+.card:nth-child(2) {
+    background-color: #e74c3c;
+}
+
+.card:nth-child(3) {
+    background-color: #f39c12;
+}
+
+.card:nth-child(4) {
+    background-color: #2ecc71;
+}
+
+.group-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 32px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.container-adicionar {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.container-search {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-container-qtd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.input-container-qtd label {
+    margin-bottom: 10px;
+}
+
+.input-container label {
+    margin-bottom: 10px;
+}
+
+.input-container-search span {
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+}
+
+.input-container-search {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.hidden{
+    color: white;
+}
+
+.inputStyle {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.inputStyleQtd {
+    padding: 10px;
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.adicionarStyle {
+    background: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.buscarStyle {
+    background: #858585;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.table-container{
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #2c3e50;
+    color: white;
+}
+
+footer {
+    background-color: #d6d6d6;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+    color: #2c3e50;
+}
+
+.btn-avancar {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-excluir {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.status-pendente {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.status-processando {
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.status-concluido {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+/* --- RESPONSIVIDADE --- */
+
+@media (max-width: 768px) {
+    /* 1. Cards: Deixam de estar lado a lado e passam a ocupar a largura toda */
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    /* 2. Formulário: Stack vertical para os inputs não ficarem espremidos */
+    .group-input {
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+        width: 90%;
+    }
+
+    .input-container, .input-container-qtd, .input-container-search {
+        width: 100%;
+    }
+
+    .container-adicionar, .container-search {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .inputStyle, .inputStyleQtd, .adicionarStyle {
+        width: 100%; /* Inputs ocupam a largura total no telemóvel */
+    }
+
+    .input-small {
+        width: 93%;
+    }
+
+    .btn-adicionar{
+        height: 50px;
+    }
+
+    /* 3. Tabela: O maior desafio. Vamos permitir scroll horizontal */
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
